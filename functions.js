@@ -3,13 +3,13 @@ function printGreeting() {
   console.log("Hello!");
 
 }
-console.log(printGreeting());
+printGreeting();
 
 // 2: Write a function that accepts 1 argument. The function should console.log a sentence that interpolates the data passed in.
 function getLocation(location){
   console.log(location);
 }
-console.log(getLocation("Colorado"));
+getLocation("Colorado");
 // 3: Write a function that has 3 parameters: a string and two numbers.
 //The String will be the name of a company, and the numbers will represent the minimum and maximum of a pay range for a posted job.
 //The function should print out a sentence that includes the name of
@@ -17,21 +17,34 @@ console.log(getLocation("Colorado"));
 function jobListing(company, minSalary, maxSalary){
   console.log(`${company} pay range is ${minSalary} to ${maxSalary}.`);
 }
-console.log(jobListing("jedeo",11000,10000));
+jobListing("jedeo",11000,10000);
 
 // 4: Write a function that satifies the following interaction pattern:
-function checkStock(numRemingIteam, item ){
-  console.log(`Your iteam is ${item} and there is ${numRemingIteam} it left.`);
 
+function checkStock(numRemingIteam, item ) {
+  var inStock = [4, 3, 0, 1];
+  for (var i = 0; i < inStock.length; i++) {
+  if (numRemingIteam === inStock[i] && inStock[i] >= 4){
+    console.log(`${item} is in stuock`);
+  }else if (inStock[i]  === numRemingIteam && numRemingIteam <= 3) {
+    console.log(`${item} is running low`);
+  }else if (numRemingIteam === 0) {
+    console.log(`${item} - out of stock`);
+  }
 }
-console.log(checkStock(4, "Coffee"));
+}
+
+  //console.log(`Your iteam is ${item} and there is ${numRemingIteam} in stock.`);
+
+//  console
+checkStock(4, "Coffee");
 // => "Coffee is stocked"
 
-console.log(checkStock(3, "Tortillas"));
+checkStock(3, "Tortillas");
 // => "Tortillas - running LOW"
 
-console.log(checkStock(0, "Cheese"));
+checkStock(0, "Cheese");
 // => "Cheese - OUT of stock!"
 
-console.log(checkStock(1, "Salsa"));
+checkStock(1, "Salsa");
 // => "Salsa - running LOW"
