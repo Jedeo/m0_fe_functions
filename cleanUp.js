@@ -11,7 +11,7 @@
 function nameQuestion() {
   console.log("Hello, what is your name?");// added simi colon
 }
-console.log(nameQuestion()); // added simi colon
+nameQuestion();
 
 
 // EX 2:
@@ -19,8 +19,8 @@ function addThreeNums(first, second, third) {
   var sum = first + second + third; // added simi colon
   console.log(sum);
 } //realigned the closing bracket
-console.log(addThreeNums(1, 2, 3)); //add log so it showes in terminal
-console.log(addThreeNums(4, 2, 7));//add log so it showes in terminal
+addThreeNums(1, 2, 3);
+addThreeNums(4, 2, 7);
 
 // EX 3:
 function makeFreshPesto(){ //wrote out function
@@ -30,7 +30,7 @@ function makeFreshPesto(){ //wrote out function
   console.log("Slowly pour in oil");
   console.log("Season");
 } //bracket (cummited out bracket)
-console.log(makeFreshPesto());
+makeFreshPesto();
 
 
 //  EX 4:
@@ -39,4 +39,4 @@ function average(num1, num2){
   var avg = sum / 2;
   console.log(`the average is: ${avg}.`); // moved the "." inside the ``
 }
-console.log(average(5,10)); // called and log the method
+average(5,10); // called and log the method
