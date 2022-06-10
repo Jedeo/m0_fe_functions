@@ -14,10 +14,12 @@ getLocation("Colorado");
 //The String will be the name of a company, and the numbers will represent the minimum and maximum of a pay range for a posted job.
 //The function should print out a sentence that includes the name of
 //the company and the range itself (if the numbers passed in are 90000 and 110000, the pay range is 20000).
-function jobListing(company, minSalary, maxSalary){
-  console.log(`${company} pay range is ${minSalary} to ${maxSalary}.`);
+function jobListing(company, maxSalary, minSalary){
+
+  var range = maxSalary - minSalary;
+  console.log(`${company} pay range is ${range}.`);
 }
-jobListing("jedeo",11000,10000);
+jobListing("jedeo",1001000,10000);
 
 // 4: Write a function that satifies the following interaction pattern:
 
